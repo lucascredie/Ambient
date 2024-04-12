@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/Gilroy-Regular.otf') format('otf');
+  font-weight: 400;
+}
+
+.THEME {
+  font-family: "Gilroy";
+}
+
+.THEME.GREEN {
+    --primaryColor: #ECE535;
+    --borderColor: #595B22;
+    --panelColor: rgba(198, 196, 120, 0.06);
+    --gradientLight: #324b12;
+    --gradientDark: #131c05;
+    --backgroundColor: #141a0c;
+}
+  
+.THEME.BLUE {
+  --primaryColor: #35C0EC;
+  --borderColor: #22405B;
+  --panelColor: rgba(53, 192, 236, 0.06);
+  --gradientLight: #0e2a4b;
+  --gradientDark: #040819;
+  --backgroundColor: #151921;
+}
+
+.THEME.RED {
+  --primaryColor: #ec354d;
+  --borderColor: #5b222f;
+  --panelColor: rgba(236, 53, 105, 0.06);
+  --gradientLight: #471023;
+  --gradientDark: #150408;
+  --backgroundColor: #211519;
+}
+
+.THEME.YELLOW {
+  --primaryColor: #eca635;
+  --borderColor: #5b4722;
+  --panelColor: rgba(236, 151, 53, 0.06);
+  --gradientLight: #43340b;
+  --gradientDark: #211715;
+  --backgroundColor: #211a15;
+}
+
+.THEME.PURPLE {
+  --primaryColor: #7535ec;
+  --borderColor: #3d225b;
+  --panelColor: rgba(160, 53, 236, 0.06);
+  --gradientLight: #1f0732;
+  --gradientDark: #0a0206;
+  --backgroundColor: #0e0217;
+}
+
+.THEME.AMBER {
+  --primaryColor: #f2782c;
+  --borderColor: #91421b;
+  --panelColor: rgba(227, 92, 14, 0.06);
+  --gradientLight: #2a1512;
+  --gradientDark: #0d0806;
+  --backgroundColor: #0a0401;
+}

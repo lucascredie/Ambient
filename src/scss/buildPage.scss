@@ -1,0 +1,69 @@
+.buildPage {
+    position: relative;
+    // background: rgba(255, 0, 0, 0.105);
+    height: 90vh;
+    width: 100vw;
+
+    &_text {
+        position: fixed;
+        right: -5px;
+        top: 40%;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--borderColor);
+        transition: 200ms;
+    }
+
+    &_sideMenu {
+        transform: translateX(-308px);
+        margin-top: 40px;
+        backdrop-filter: blur(40px);
+        position: absolute;
+        background-color: var(--panelColor);
+        padding: 20px;
+        padding-right: 40px;
+        max-height: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        z-index: 999900;
+        border: 1px solid var(--borderColor);
+        overflow-y: scroll;
+        transition: 300ms;
+
+        &.closed {
+            transform: translateX(-350px);
+        }
+
+        &:hover {
+            transform: translateX(0px);
+            transition: 300ms;
+            & .buildPage_text {
+                color: var(--primaryColor);
+                transition: 200ms;
+            }
+        }
+    }
+    
+}
+
+.buildCard {
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        background-color: var(--backgroundColor);
+        border-radius: 5px;
+        border: 1px solid var(--borderColor);
+        transition: 300ms;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        &:hover {
+            transform: scale(1.1, 1.1);
+            transition: 300ms;
+            border: 1px solid var(--primaryColor);
+        }
+}

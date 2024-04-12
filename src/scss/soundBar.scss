@@ -1,0 +1,41 @@
+.soundBarContainer {
+    // background-color: red;
+    position: relative;
+    top: 76vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.soundBar {
+    background-color: var(--panelColor);
+    display: inline-flex;
+    width: 600px;
+    padding: 10px 30px;
+    justify-content: center;
+    border: 1px solid var(--borderColor);
+    border-radius: 60px;
+    svg{
+        cursor: pointer;
+        transition: 200ms;
+        margin-right: 20px;
+        fill-opacity: 0.25;
+        width: 36px;
+        height: 36px;
+
+        path {
+            fill: var(--primaryColor);
+        }
+
+        &.true path {
+            fill-opacity: 1.0;
+        }
+
+        &:hover {
+            transform: scale(1.1, 1.1);
+            transition: 200ms;
+        }
+    }
+
+}

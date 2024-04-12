@@ -1,0 +1,120 @@
+.soundCard {
+    // max-width: 300px;
+    backdrop-filter: blur(40px);
+    background-color: var(--panelColor);
+    border: 1px solid var(--borderColor);
+    padding: 16px;
+    border-radius: 5px;
+    transition: 200ms;
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--primaryColor);
+        font-size: 30px;
+        padding-bottom: 10px;
+        &-left {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &.inactive {
+        & .soundCard_header, & .soundCard_controller{
+            opacity: 0.5;
+        }
+        opacity: 1;
+        transition: 200ms;
+        .sliderInput:hover {
+            opacity: 0.7;
+        }
+    }
+    &_button {
+        cursor: pointer;
+            opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    svg {
+        path, rect {
+            fill: var(--primaryColor);
+        }
+    }
+    p {
+        margin: 0px;
+        margin-left: 15px;
+    }
+
+
+
+}
+.sliderInput {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: var(--backgroundColor); /* Grey background */
+    opacity: 0.7;
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 100px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.sliderInput:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
+.sliderInput::-webkit-slider-thumb {
+-webkit-appearance: none; /* Override default look */
+appearance: none;
+width: 18px; /* Set a specific slider handle width */
+height: 18px; /* Slider handle height */
+border-radius: 15px;
+background: var(--backgroundColor); /* Green background */
+border: 2px solid var(--primaryColor);
+cursor: pointer; /* Cursor on hover */
+}
+
+.sliderInput::-moz-range-thumb {
+width: 25px; /* Set a specific slider handle width */
+height: 25px; /* Slider handle height */
+background: #4CAF50; /* Green background */
+cursor: pointer; /* Cursor on hover */
+}
+
+.circle1 {
+    animation-name: loadAnimation;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    fill: var(--primaryColor);
+}
+.circle2 {
+    animation-name: loadAnimation;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+    fill: var(--primaryColor);
+}
+.circle3 {
+    animation-name: loadAnimation;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    animation-delay: 600ms;
+    fill: var(--primaryColor);
+}
+
+@keyframes loadAnimation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
