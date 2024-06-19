@@ -100,7 +100,7 @@ function BuildPage(props) {
      
       {renderCards()}
       
-      <canvas ref={canvasRef} width={1400} height={600} ></canvas>
+      <canvas ref={canvasRef} width={1800} height={800} ></canvas>
     </div>
   );
 }
